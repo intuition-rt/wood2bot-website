@@ -2,7 +2,7 @@
 :root {
     --primary-pink: #D64577; /* Rose principal */
     --primary-hover: #b53661;
-    --bg-cream: #F9F6F2;     /* Fond crème */
+    --bg-cream: #FFF5EF;     /* Fond crème */
     --text-dark: #333333;
     --text-gray: #666666;
     --accent-purple: #8A4E9E; /* Pour les bordures des étapes */
@@ -21,6 +21,7 @@ body {
     font-family: var(--font-body);
     color: var(--text-dark);
     line-height: 1.6;
+    padding-top: 85px;
 }
 
 h1, h2, h3 {
@@ -35,7 +36,7 @@ a {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -45,7 +46,15 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 20px 5px 20px; /* Moins de padding en bas */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1100px;
+    z-index: 1000;
+    background-color: var(--bg-cream);
 }
 
 .logo {
@@ -136,7 +145,7 @@ a {
     padding: 40px 0;
     font-style: italic;
     color: var(--primary-pink);
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     max-width: 700px;
 }
 

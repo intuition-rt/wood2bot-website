@@ -523,3 +523,82 @@ a {
     background-color: black;
 }
 
+/* --- Animations Animations & Interactions --- */
+
+/* Keyframes doux et modernes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Classes pour l'animation au scroll (JS Trigger) */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Application immédiate sur le Hero (sans JS requis pour le premier écran) */
+.hero-content {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-image {
+    animation: scaleIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0; /* État initial caché */
+}
+
+/* Micro-interactions sur les images (Hover) */
+.partners-logos img {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.partners-logos img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.step-image-box {
+    overflow: hidden; /* Pour contenir le zoom */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.step-image-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(153, 86, 223, 0.2);
+}
+
+.feature-image img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.feature-image:hover img {
+    transform: scale(1.02);
+}
+

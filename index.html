@@ -93,7 +93,7 @@
         </section>
 
         <section class="partners container">
-            <div class="partners-box">
+            <div class="partners-box reveal-scale">
                 <h3 class="partners-title">Lauréat du dispositif Edu-up</h3>
                 <div class="partners-logos">
                     <img src="assets/code-en-bois.png" alt="Code en bois">
@@ -103,26 +103,26 @@
             </div>
         </section>
 
-        <section class="intro container">
+        <section class="intro container reveal-up">
             <p>
                 Découvrez le kit Wood2Bot, un outil éducatif pour initier les enfants à la programmation de façon ludique et interactive, de la maternelle à l'école primaire.
             </p>
         </section>
 
         <section class="steps container">
-            <div class="step-card">
+            <div class="step-card reveal-up">
                 <div class="step-image-box">
                     <img src="./assets/parts/1.png" alt="Étape 1 : Construire le programme avec les blocs de bois">
                 </div>
                 <h3>1. Construisez</h3>
             </div>
-            <div class="step-card">
+            <div class="step-card reveal-up" style="transition-delay: 0.1s;">
                 <div class="step-image-box">
                     <img src="./assets/parts/2.png" alt="Étape 2 : Scanner le code avec le robot Wood2Bot">
                 </div>
                 <h3>2. Scannez</h3>
             </div>
-            <div class="step-card">
+            <div class="step-card reveal-up" style="transition-delay: 0.2s;">
                 <div class="step-image-box">
                     <img src="./assets/parts/3.png" alt="Étape 3 : Tester et voir le robot s'exécuter">
                 </div>
@@ -130,7 +130,7 @@
             </div>
         </section>
 
-        <section class="feature container">
+        <section class="feature container reveal-up">
             <div class="feature-image">
                 <img src="assets/braille.png" alt="Lecture tactile des blocs en Braille pour l'accessibilité">
             </div>
@@ -145,7 +145,7 @@
             </div>
         </section>
 
-        <section class="feature feature-reverse container">
+        <section class="feature feature-reverse container reveal-up">
             <div class="feature-image">
                 <img src="assets/blocs.png" alt="Algorithme de programmation créé avec des blocs en bois">
             </div>
@@ -177,5 +177,27 @@
         </div>
     </footer>
 
+    <script>
+        // Observer pour déclencher les animations au scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up, .reveal-scale').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>

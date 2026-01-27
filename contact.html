@@ -48,7 +48,7 @@
         </section>
 
         <section class="contact-section container">
-            <form id="contactForm" class="modern-form">
+            <form id="contactForm" class="modern-form reveal-up">
                 <div class="form-group">
                     <label for="name">Nom</label>
                     <input type="text" id="name" name="name" required placeholder="Votre nom">
@@ -153,6 +153,27 @@
         });
     </script>
 
+    <script>
+        // Observer pour les animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
 
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up, .reveal-scale').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>

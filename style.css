@@ -271,6 +271,17 @@ a {
 
 /* --- Responsive Mobile --- */
 @media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .step-image-box {
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .feature, .feature-reverse {
         flex-direction: column;
         text-align: center;

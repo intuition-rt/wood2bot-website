@@ -77,8 +77,9 @@
             </svg>
         </div>
         <nav class="nav">
-            <a href="contact.html" class="nav-link">Contact</a>
             <a href="#" class="nav-link">Présentation</a>
+            <a href="documentation.html" class="nav-link">Documentation</a>
+            <a href="contact.html" class="nav-link nav-cta">Contact</a>
         </nav>
 
     </header>
@@ -86,10 +87,20 @@
     <main>
         <section class="hero container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Kit éducatif &amp; inclusif
+                </div>
                 <h1>Le kit idéal pour <br>apprendre la <span class="highlight">programmation...</span> <br>sans écrans !</h1>
+                <p class="hero-description">De la maternelle au primaire — une approche tangible, ludique et accessible à tous les enfants, y compris via le braille.</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn-primary">Nous contacter</a>
+                    <a href="#decouvrir" class="btn-secondary">Découvrir →</a>
+                </div>
             </div>
             <div class="hero-image">
-        <img src="assets/landing-mobile.png" alt="Kit éducatif Wood2Bot avec robot et blocs de programmation en bois">
+                <img src="assets/landing-mobile.png" alt="Kit éducatif Wood2Bot avec robot et blocs de programmation en bois">
+            </div>
         </section>
 
         <section class="partners container">
@@ -109,24 +120,34 @@
             </p>
         </section>
 
-        <section class="steps container">
-            <div class="step-card reveal-up">
-                <div class="step-image-box">
-                    <img src="./assets/parts/1.png" alt="Étape 1 : Construire le programme avec les blocs de bois">
-                </div>
-                <h3>1. Construisez</h3>
+        <section class="steps-wrapper container" id="decouvrir">
+            <div class="reveal-up">
+                <div class="section-label purple">✦ Comment ça marche</div>
+                <h2 class="section-heading">3 étapes, <span>c'est tout !</span></h2>
+                <p class="section-sub">Une expérience pensée pour que les enfants se lancent seuls, à leur rythme.</p>
             </div>
-            <div class="step-card reveal-up" style="transition-delay: 0.1s;">
-                <div class="step-image-box">
-                    <img src="./assets/parts/2.png" alt="Étape 2 : Scanner le code avec le robot Wood2Bot">
+            <div class="steps">
+                <div class="step-card reveal-up">
+                    <div class="step-number">1</div>
+                    <div class="step-image-box">
+                        <img src="./assets/parts/1.png" alt="Étape 1 : Construire le programme avec les blocs de bois">
+                    </div>
+                    <h3>Construisez</h3>
                 </div>
-                <h3>2. Scannez</h3>
-            </div>
-            <div class="step-card reveal-up" style="transition-delay: 0.2s;">
-                <div class="step-image-box">
-                    <img src="./assets/parts/3.png" alt="Étape 3 : Tester et voir le robot s'exécuter">
+                <div class="step-card reveal-up" style="transition-delay: 0.12s;">
+                    <div class="step-number">2</div>
+                    <div class="step-image-box">
+                        <img src="./assets/parts/2.png" alt="Étape 2 : Scanner le code avec le robot Wood2Bot">
+                    </div>
+                    <h3>Scannez</h3>
                 </div>
-                <h3>3. Testez</h3>
+                <div class="step-card reveal-up" style="transition-delay: 0.24s;">
+                    <div class="step-number">3</div>
+                    <div class="step-image-box">
+                        <img src="./assets/parts/3.png" alt="Étape 3 : Tester et voir le robot s'exécuter">
+                    </div>
+                    <h3>Testez</h3>
+                </div>
             </div>
         </section>
 
@@ -135,6 +156,7 @@
                 <img src="assets/braille.png" alt="Lecture tactile des blocs en Braille pour l'accessibilité">
             </div>
             <div class="feature-content">
+                <div class="section-label pink">♿ Inclusion</div>
                 <h2>Un projet inclusif et interactif.</h2>
                 <p>
                     Avec Wood2Bot, la programmation devient accessible à tous, sans écrans, et avec un vrai support pédagogique. Chaque enfant peut découvrir la programmation à son rythme.
@@ -142,6 +164,182 @@
                 <p>
                     Les <span class="text-highlight">briques enrichies de braille</span>, les <span class="text-highlight">vibrations haptiques</span> et les <span class="text-highlight">signaux lumineux</span> du robot offrent une expérience sensorielle et ludique, accessible à tous.
                 </p>
+                <div class="feature-tags">
+                    <span class="feature-tag pink">Braille</span>
+                    <span class="feature-tag purple">Vibrations haptiques</span>
+                    <span class="feature-tag orange">Signaux lumineux</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TECH STACK ===== -->
+        <section class="tech-stack container reveal-up">
+            <div class="section-label purple">⚡ Stack embarquée</div>
+            <h2 class="section-heading">Un firmware <span>C++ haute performance</span></h2>
+            <p class="section-sub">ESP32 dual-core, FreeRTOS, 5 capteurs, 2 actionneurs — piloté par des tuiles NFC.</p>
+            <div class="chips-grid">
+                <div class="chip-card purple">
+                    <span class="chip-icon">🧠</span>
+                    <span class="chip-name">ESP32 Xtensa LX6</span>
+                    <span class="chip-desc">Dual-core 240 MHz — Arduino via PlatformIO — FreeRTOS</span>
+                    <span class="chip-bus">MCU Principal</span>
+                </div>
+                <div class="chip-card orange">
+                    <span class="chip-icon">📡</span>
+                    <span class="chip-name">PN532</span>
+                    <span class="chip-desc">Lecteur NFC ISO 14443-A — NDEF Text — CS=GPIO15</span>
+                    <span class="chip-bus">SPI</span>
+                </div>
+                <div class="chip-card teal">
+                    <span class="chip-icon">🔄</span>
+                    <span class="chip-name">BMI270 (Bosch)</span>
+                    <span class="chip-desc">Accéléromètre + gyroscope — filtre de Madgwick — détection flip</span>
+                    <span class="chip-bus">I2C — GPIO 21/22</span>
+                </div>
+                <div class="chip-card teal">
+                    <span class="chip-icon">📏</span>
+                    <span class="chip-name">VL53L0X (ST)</span>
+                    <span class="chip-desc">Time-of-Flight — mesure distance en mm — portée 20–2000 mm</span>
+                    <span class="chip-bus">I2C bus 1 — GPIO 4/5</span>
+                </div>
+                <div class="chip-card pink">
+                    <span class="chip-icon">🎨</span>
+                    <span class="chip-name">VEML6040 (Vishay)</span>
+                    <span class="chip-desc">Capteur couleur RGBW — via TCA9548A mux I2C canal 1</span>
+                    <span class="chip-bus">I2C @ 0x70</span>
+                </div>
+                <div class="chip-card orange">
+                    <span class="chip-icon">⚙️</span>
+                    <span class="chip-name">SCServo SCS0009 × 2</span>
+                    <span class="chip-desc">Servos différentiels — UART half-duplex — 1 Mbaud — PID lacet</span>
+                    <span class="chip-bus">UART2 — GPIO 16/17</span>
+                </div>
+                <div class="chip-card purple">
+                    <span class="chip-icon">💡</span>
+                    <span class="chip-name">WS2812B × 16</span>
+                    <span class="chip-desc">NeoPixel RGB — feedback visuel état robot — GPIO12</span>
+                    <span class="chip-bus">GPIO 12 (1-wire)</span>
+                </div>
+                <div class="chip-card purple">
+                    <span class="chip-icon">🔀</span>
+                    <span class="chip-name">TCA9548A</span>
+                    <span class="chip-desc">Multiplexeur I2C 8 canaux — sélection bus VEML6040</span>
+                    <span class="chip-bus">I2C @ 0x70</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ARCHITECTURE ===== -->
+        <section class="arch-section container reveal-up">
+            <div class="section-label orange">🏗 Architecture firmware</div>
+            <h2 class="section-heading">Deux modes, <span>un seul geste</span></h2>
+            <p class="section-sub">Retourner le robot bascule entre le mode scan NFC et l'exécution du programme — détecté par l'IMU en temps réel.</p>
+            <div class="arch-diagram">
+                <div class="arch-layers">
+                    <div class="arch-layer">
+                        <span class="arch-layer-label">INPUT</span>
+                        <div class="arch-layer-content">
+                            <span class="arch-box box-nfc">📡 PN532 — NFC (SPI)</span>
+                            <span class="arch-box box-imu">🔄 BMI270 — IMU (I2C) · Core 0</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <span class="arch-layer-label">FSM</span>
+                        <div class="arch-layer-content">
+                            <span class="arch-box box-fsm">Scanner FSM — validation séquence NFC · isValidTag()</span>
+                            <span class="arch-box box-rtos">FreeRTOS · Task_imu + Task_prog</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <span class="arch-layer-label">TOKENS</span>
+                        <div class="arch-layer-content">
+                            <span class="arch-box box-core">vector&lt;String&gt; tagContents[]  — programme en RAM</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <span class="arch-layer-label">PARSER</span>
+                        <div class="arch-layer-content">
+                            <span class="arch-box box-parser">Interpréteur — IF / ELSE / REPEAT / END_REPEAT + capteurs</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <span class="arch-layer-label">OUTPUT</span>
+                        <div class="arch-layer-content">
+                            <span class="arch-box box-motor">⚙️ SCServo SCS0009 (UART2)</span>
+                            <span class="arch-box box-led">💡 NeoPixel WS2812 (GPIO12)</span>
+                            <span class="arch-box box-tof">📏 VL53L0X ToF</span>
+                            <span class="arch-box box-color">🎨 VEML6040 Couleur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== NFC LANGUAGE PREVIEW ===== -->
+        <section class="nfc-preview container reveal-up">
+            <div class="section-label pink">🧱 Langage NFC</div>
+            <h2 class="section-heading">Un vrai <span>langage structuré</span></h2>
+            <p class="section-sub">Actions, conditions, boucles — chaque brique NFC est un token. L'interpréteur gère l'imbrication complète.</p>
+            <div class="nfc-examples">
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-dot code-dot-red"></span>
+                        <span class="code-dot code-dot-yellow"></span>
+                        <span class="code-dot code-dot-green"></span>
+                        Séquence simple
+                    </div>
+                    <pre><span class="tok-kw">START</span>
+<span class="tok-act">MOVE_F</span>
+<span class="tok-act">TURN_L</span>
+<span class="tok-act">MOVE_F</span></pre>
+                </div>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-dot code-dot-red"></span>
+                        <span class="code-dot code-dot-yellow"></span>
+                        <span class="code-dot code-dot-green"></span>
+                        Condition distance
+                    </div>
+                    <pre><span class="tok-kw">START</span>
+<span class="tok-cond">IF</span> <span class="tok-cond">DISTANCE</span> <span class="tok-cond">&lt;</span> <span class="tok-num">150</span>
+  <span class="tok-act">TURN_R</span>
+<span class="tok-cond">ELSE</span>
+  <span class="tok-act">MOVE_F</span>
+<span class="tok-cond">END_IF</span></pre>
+                </div>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-dot code-dot-red"></span>
+                        <span class="code-dot code-dot-yellow"></span>
+                        <span class="code-dot code-dot-green"></span>
+                        Boucle comptée
+                    </div>
+                    <pre><span class="tok-kw">START</span>
+<span class="tok-cond">REPEAT</span> <span class="tok-num">3</span>
+  <span class="tok-act">MOVE_F</span>
+  <span class="tok-act">TURN_L</span>
+<span class="tok-cond">END_REPEAT</span></pre>
+                </div>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-dot code-dot-red"></span>
+                        <span class="code-dot code-dot-yellow"></span>
+                        <span class="code-dot code-dot-green"></span>
+                        Boucle sur couleur
+                    </div>
+                    <pre><span class="tok-kw">START</span>
+<span class="tok-cond">REPEAT</span> <span class="tok-cond">COLOR</span> <span class="tok-cond">=</span> <span class="tok-val">RED</span>
+  <span class="tok-act">MOVE_F</span>
+<span class="tok-cond">END_REPEAT</span>
+<span class="tok-act">TURN_L</span></pre>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:36px;">
+                <a href="documentation.html#nfc-language" class="btn-primary">Voir toute la référence →</a>
             </div>
         </section>
 
@@ -150,30 +348,47 @@
                 <img src="assets/blocs.png" alt="Algorithme de programmation créé avec des blocs en bois">
             </div>
             <div class="feature-content">
+                <div class="section-label purple">🎮 Apprentissage</div>
                 <h2>Avec Wood2bot, <br>apprenez sans écrans</h2>
                 <p>
                     Sans écrans, les enfants découvrent la logique de la programmation <span class="text-highlight">à travers la manipulation et le jeu.</span>
                 </p>
-                
                 <h2>ou avec l'application.</h2>
                 <p>
                     Les enfants vont plus loin : ils codent, testent et bénéficient de <span class="text-highlight">corrections automatiques</span> et d'un <span class="text-highlight">accompagnement progressif.</span>
                 </p>
+                <div class="feature-tags">
+                    <span class="feature-tag purple">Sans écran</span>
+                    <span class="feature-tag pink">Application mobile</span>
+                    <span class="feature-tag orange">Progression guidée</span>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-content">
-            <div class="logo white-logo">
-                <span class="logo-wood">Wood</span><span class="logo-2bot">2bot</span>
+            <div class="footer-brand">
+                <div class="logo white-logo">
+                    <svg width="160" height="31" viewBox="0 0 215 35" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.9">
+                        <path d="M40.8536 0.565996V22.6038C40.8536 28.9035 35.7004 34.2994 29.4009 34.239C25.7242 34.2037 22.4621 32.4138 20.4079 29.6625C18.3961 32.4351 15.1205 34.208 11.3545 34.208C5.09256 34.208 0 29.1783 0 22.9918V0.94756C0 0.455405 0.398978 0.056488 0.891069 0.056488H3.5099C4.00205 0.056488 4.40097 0.455468 4.40097 0.94756V22.9918C4.40097 26.8144 7.45651 29.8071 11.3545 29.8071C15.1645 29.8071 18.1446 26.8207 18.1446 23.0107H18.1697V12.5221C18.1697 12.03 18.5687 11.631 19.0608 11.631H21.6796C22.1718 11.631 22.5707 12.03 22.5707 12.5221V22.6963C22.5707 26.3095 25.2486 29.4709 28.846 29.8073C32.9731 30.1932 36.4526 26.946 36.4526 22.8975V0.542293C36.4526 0.376377 36.6595 0.300491 36.7668 0.427051L38.6594 2.65935L40.5397 0.450377C40.6471 0.324132 40.8536 0.400268 40.8536 0.565996Z" fill="white"/>
+                        <path d="M145.59 34.1264L145.634 34.1641H145.59L145.546 34.1704H123.485V29.7883H123.479V29.7631H123.472C123.485 23.6081 128.427 18.591 134.55 18.4527V18.4275C138.803 18.4275 142.171 14.5811 141.374 10.1868C140.872 7.42325 138.662 5.19554 135.904 4.66868C131.77 3.87934 128.101 6.80435 127.655 10.6847C127.603 11.1365 127.228 11.4803 126.773 11.4803H124.142C123.619 11.4803 123.205 11.0313 123.25 10.5105C123.78 4.28429 129.373 -0.530626 135.878 0.214647C141.285 0.833989 145.553 5.36567 145.872 10.7979C146.253 17.2723 141.175 22.6789 134.814 22.8223V22.8475C130.992 22.8475 127.886 25.947 127.873 29.7696H145.609L145.591 29.7884L143.186 31.8214C143.102 31.8926 143.102 32.0224 143.186 32.0936L145.59 34.1264Z" fill="rgba(255,178,86,0.9)"/>
+                        <path d="M189.286 11.4803C183.03 11.4803 177.944 16.5665 177.944 22.8222C177.944 29.0716 183.03 34.1641 189.286 34.1641C195.541 34.1641 200.628 29.0716 200.628 22.8222C200.628 16.5665 195.541 11.4803 189.286 11.4803ZM189.286 29.7631C185.457 29.7631 182.345 26.6447 182.345 22.8222C182.345 18.9933 185.457 15.8812 189.286 15.8812C193.115 15.8812 196.227 18.9933 196.227 22.8222C196.227 26.6447 193.115 29.7631 189.286 29.7631Z" fill="rgba(237,69,109,0.95)"/>
+                        <path d="M214.562 13.8191H207.764V22.8348C207.764 26.3527 210.636 29.3638 214.198 29.7624C214.652 29.8133 215 30.188 215 30.6454V33.2745C215 33.7975 214.551 34.2113 214.03 34.1668C208.157 33.6662 203.363 28.6772 203.363 22.8347V0.903584C203.363 0.41143 203.762 0.0125122 204.254 0.0125122H206.872C207.365 0.0125122 207.764 0.411492 207.764 0.903584V9.41802H214.545C214.711 9.41802 214.787 9.62505 214.66 9.73225L212.454 11.5996L214.678 13.5054C214.804 13.613 214.728 13.8191 214.562 13.8191Z" fill="rgba(237,69,109,0.95)"/>
+                        <path d="M80.2737 11.3419C74.0243 11.3419 68.9318 16.4282 68.9318 22.6839C68.9318 28.9395 74.0243 34.0258 80.2737 34.0258C86.5294 34.0258 91.6219 28.9395 91.6219 22.6839C91.6219 16.4282 86.5294 11.3419 80.2737 11.3419ZM80.2737 29.6248C76.4512 29.6248 73.3327 26.5127 73.3327 22.6839C73.3327 18.855 76.4512 15.7429 80.2737 15.7429C84.1026 15.7429 87.221 18.855 87.221 22.6839C87.221 26.5127 84.1026 29.6248 80.2737 29.6248Z" fill="white"/>
+                        <path d="M55.3579 11.4991C49.1023 11.4991 44.016 16.5916 44.016 22.8473C44.016 29.0967 49.1023 34.1892 55.3579 34.1892C61.6136 34.1892 66.6999 29.0967 66.6999 22.8473C66.6999 16.5916 61.6136 11.4991 55.3579 11.4991ZM55.3579 29.7883C51.5291 29.7883 48.417 26.6699 48.417 22.8473C48.417 19.0185 51.5291 15.9001 55.3579 15.9001C59.1868 15.9001 62.2989 19.0185 62.2989 22.8473C62.2989 26.6699 59.1868 29.7883 55.3579 29.7883Z" fill="white"/>
+                        <path d="M123.472 29.7883V29.7631C119.656 29.7568 116.55 26.6636 116.538 22.8473V0.899026C116.538 0.402345 116.142 0.0062561 115.645 0.0062561H113.03C112.533 0.0062561 112.137 0.402345 112.137 0.899026V13.8756C110.056 12.2598 107.39 11.3482 104.517 11.5179C99.0972 11.8386 94.5705 16.0824 93.9356 21.4767C93.1246 28.3359 98.4874 34.1892 105.196 34.1892C108.949 34.1892 112.281 32.3534 114.343 29.5368C116.406 32.3408 119.732 34.1641 123.479 34.1641V29.7883H123.472ZM112.137 22.8473C112.137 26.6699 109.025 29.7883 105.196 29.7883C101.367 29.7883 98.2549 26.6699 98.2549 22.8473C98.2549 19.0185 101.367 15.9 105.196 15.9C109.018 15.9 112.124 19.0059 112.137 22.8221V22.8473Z" fill="white"/>
+                        <path d="M164.056 11.6437C161.358 11.6437 158.881 12.5868 156.932 14.1648V0.891069C156.932 0.398915 156.533 0 156.041 0H153.422C152.93 0 152.531 0.398978 152.531 0.891069V22.8536C152.531 26.6696 149.438 29.7631 145.622 29.7631L145.609 29.7694L145.59 29.7883L143.186 31.8213C143.102 31.8925 143.102 32.0223 143.186 32.0935L145.59 34.1265L145.634 34.1642C145.678 34.1642 145.722 34.1642 145.766 34.1579C149.463 34.1076 152.739 32.2718 154.763 29.4803C156.813 32.4101 160.214 34.3276 164.056 34.3276C170.305 34.3276 175.398 29.2414 175.398 22.9857C175.398 16.73 170.305 11.6437 164.056 11.6437ZM164.056 29.9266C160.227 29.9266 157.115 26.8145 157.115 22.9856C157.115 19.1568 160.227 16.0447 164.056 16.0447C167.884 16.0447 170.997 19.1568 170.997 22.9856C170.997 26.8145 167.884 29.9266 164.056 29.9266Z" fill="rgba(237,69,109,0.95)"/>
+                    </svg>
+                </div>
+                <p>Le robot éducatif en bois pour initier les enfants à la programmation sans écran.</p>
             </div>
             <div class="footer-links">
+                <a href="index.html">Présentation</a>
+                <a href="documentation.html">Documentation</a>
                 <a href="contact.html">Contact</a>
-                <a href="#">Présentation</a>
-                <p class="legal">Tous droits réservés - Mentions légales</p>
+                <p class="legal">Tous droits réservés — Wood2Bot</p>
             </div>
-
         </div>
     </footer>
 
